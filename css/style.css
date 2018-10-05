@@ -3,31 +3,36 @@ Colors used
 Primary Color (Yellow): #FFFF00;
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
+  font-size: 21px; /* Sets the font size to 16px */
   line-height: 1.6; /* Sets the line-height to 1.6 */
+  font-weight:300;
+  color:#333333;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 2.5em;
+  font-weight:700;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 2.0em;
+  font-weight:700;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.5em;
+  font-weight:700
 }
 
 a {
   color: #000000;
-}
 
-div {
-  padding: 10px; /* Adds a 10px inner spacing to all sides*/
-  margin: 10px; /* Adds a 10px outer spacing to all sides*/
 }
 
 a:visited {
@@ -35,28 +40,21 @@ a:visited {
   color: #000000;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: none; /* No underlining when hovering over a link */
 }
 
 a:active {
   /* selected link */
-  color: #000000;
+  color: #333333;
 }
 
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
-input, texture, select, button {
-  font-family: system-ui;
-}
-
-button {
+.button {
   /* overwrite browser defaults */
   border: none; /* reset the border */
   font-family: inherit; /* takes the font from the outer container */
+  display:inline-block;
 
   /* style button */
   background-color: #FFFF00;
@@ -68,8 +66,23 @@ button {
   transition: 0.2s opacity;
 }
 
-button:hover,
-button:focus {
-  cursor: pointer; /* let's the mouse appear as hand when hovering over the button */
+.button:hover,
+.button:focus {
   opacity: 0.8; /* Reduces the opactiy of the button to 80% */
+}
+
+img{
+  width:100%
+}
+
+.wrapper{
+  max-width:1200px;
+  margin:0 auto; /*apply to all side*/
+  padding:0 20px; /*apply to inner space*/
+}
+
+.col-6{
+  width: 50%;
+  float:left;
+  padding:0 15px;
 }
