@@ -80,3 +80,41 @@ img{
   margin:0 auto; /*apply to all side*/
   padding:0 20px; /*apply to inner space*/
 }
+
+.row{
+  display: flex;
+}
+
+@media only screen and (min-width: 768px){
+  .col-6{
+    width:50%;
+    display: inline-block;
+    float:left;
+    padding:0 15px;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  .col-s-6{
+    width:50%;
+    display: inline-block;
+    float:left;
+    padding:0 15px;
+  }
+}
+
+/* for mobile phone: */
+  [class*="col-"]{
+    width:100%;
+}
+
+.nagivation{
+  list-style-type: none;
+  padding: 0;
+  float: right;
+}
+
+.navigation > li {
+  display: inline-block;
+  margin-left: 10px;
+}
