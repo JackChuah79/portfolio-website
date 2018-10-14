@@ -18,18 +18,27 @@ body {
 h1 {
   font-size: 2.5em;
   font-weight:700;
-  text-align:center
+  text-align:center;
+  margin-top:0;
+  padding-top:0.67em;
 }
 
 h2 {
   font-size: 2.0em;
   font-weight:700;
   text-align:center;
+  margin-top:0;
+  padding-top:0.83em;
 }
 
 h3 {
   font-size: 1.5em;
-  font-weight:700
+  font-weight:700;
+}
+
+h4 {
+  font-size: 1.0em;
+  font-weight:700;
 }
 
 a {
@@ -77,95 +86,145 @@ img{
   width:100%;
 }
 
+/*header
+============================= */
+header{
+  background-color:#FFCC00;
+}
+
+nav {
+  float:right;
+  margin-top:47px;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+
+}
+
+.logo{
+  padding-top:10px;
+  width:200px;
+}
+
+/*layout columns and row
+============================= */
 .wrapper{
   max-width:1200px;
   margin:0 auto; /*apply to all side*/
   padding:0 20px; /*apply to inner space*/
 }
 
-.row{
-  display: flex;
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-.col-6{
+[class*="col-"] {
+    float: left;
+    padding:15px;
+}
+
+.col-lg-6{
     width:50%;
-    display: inline-block;
-    float:left;
-    padding:0 15px;
 }
 
-.navigation{
-  list-style-type: none;
-  padding: 0;
-  float: right;
+#hero{
+  background-color:#FFCC00;
+  padding: 20px 0 50px;
 }
 
-.navigation > li {
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.logo{
-  max-width:30%;
-  max-height: 30%;
-}
-
-.background{
-  background-color: #FFCC00;
-}
-
-.footer{
+/*footer
+============================= */
+footer{
   background-color:#333333;
   text-align:center;
   color:#ffffff;
 }
 
-.navigation1{
+footer ul{
   list-style-type: none;
+  margin: 0;
   padding: 0;
-  float: center;
 }
 
-.navigation1 > li {
+footer ul li {
   display: inline-block;
-  margin-left: 10px;
+  margin: 30px 30px 10px;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
+footer ul li a, footer ul li a:visited{
+  color:#FFFFFF;
+  }
+
+footer ul li a: active{
+  color:#FFCC00;
 }
-@media only screen and (max-width: 767px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
+
+footer .fab{
+  font-size:30px;
 }
+
+.copyright{
+  font-size: 13px;
+  margin-bottom:0;
+  padding-bottom:15px;
+}
+
+/*Media Queries
+============================= */
 @media only screen and (max-width: 1024px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
+    /* For tablets: */
+    body{
+      font-size:18px;
+    }
+    #work h3{
+      margin-top:0;
+    }
+  }
+@media only screen and (max-width: 767px) {
+    /* For iphone: */
+    body{
+      font-size:16px;
+    }
 
-.column-6:nth-child(2) {
-margin-right: 0;
+    h1{
+      line-height: 1.2;
+    }
+
+    /*header
+    ============================= */
+    header{
+      text-align=center;
+    }
+
+    nav{
+      margin-top:12px;
+      float:0;
+      padding-bottom;15px;
+    }
+
+    nav ul{
+      margin:0 15px;
+    }
+
+    nav ul li{
+      margin: 0 15px;
+    }
+    /*layout and column
+    ============================= */
+    .col-s-12{
+      width:100%;
+    }
+
+    [class*="col-"] {
+        padding:15px 0;
 }
