@@ -162,31 +162,7 @@ nav ul li {
 
 }
 
-#Discovery{
-  background-color:#ffcc00;
-  padding: 300px 0 300px;
-  text-align:center;
-}
-
-#Define {
-  background-color:#ffcc00;
-  padding: 300px 0 300px;
-  text-align:center;
-}
-
-#Design {
-  background-color:#ffcc00;
-  padding: 300px 0 300px;
-  text-align:center;
-}
-
-#DesignSystem {
-  background-color:#ffcc00;
-  padding: 300px 0 300px;
-  text-align:center;
-}
-
-#Conclusion {
+.section{
   background-color:#ffcc00;
   padding: 300px 0 300px;
   text-align:center;
@@ -253,13 +229,13 @@ footer .fab{
     /*header
     ============================= */
     header{
-      text-align=center;
+      text-align:center;
     }
 
     nav{
       margin-top:12px;
-      float:0;
-      padding-bottom;15px;
+      float:none;
+      padding-bottom:15px;
     }
 
     nav ul{
